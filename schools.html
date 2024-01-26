@@ -1,0 +1,160 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .abc {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            margin: 0;
+        }
+        .abc h2 {
+            text-align: center;
+        }
+        .school-container {
+            width: 100%;
+            margin-top: auto;
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .school {
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .school img {
+            width: 500px;
+            height: 300px;
+            border-radius: 5%;
+            margin-right: 20px;
+        }
+        .school-info {
+            flex: 1;
+        }
+        h3 {
+            color: #333;
+            margin: 5px;
+        }
+        .baffah {
+            color: #201d1d;
+            margin: 0;
+            font-family: garamond;
+            font-size: 17px;
+            font-weight: 300;
+        }
+        .note {
+            color: #777;
+            font-style: italic;
+            margin-top: 8px;
+        }
+        .note img {
+            width: 150px;
+            height: 100px;
+        }
+        .bbc img {
+            width: 170px;
+            height: 110px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="banner-area">
+                <a>welcome to website of</a>
+                <br>
+                <h2>KLAWAN</h2>
+                <div class="datetime-container">
+                    <p id="datetime"></p>
+                </div>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="dashboard"></div>
+            <div class="dashboard" onclick="loadContent('schools.html')">Schools</div>
+        </header>
+        <div class="menu">
+            <a href="#" onclick="loadContent('index.html')">Dashboard</a>
+            <a href="#" onclick="loadContent('about.html')">About Klawan</a>
+            <a href="#" onclick="loadContent('friends.html')">Friends</a>
+            <a href="#" onclick="loadContent('family.html')">Family</a>
+            <a href="logout.php">Logout</a>
+        </div>
+        <main class="abc">
+            <h2>ATTENDED SCHOOLS</h2> <hr>
+            <div class="school-container">
+                <div class="school">
+                    <img src="image/madobiiya.png" alt="primary">
+                    <div class="school-info">
+                        <h3>MADOBI IYA SPECIAL PRIMARY SCHOOL</h3>
+                        <P class="baffah">Year: 2007-2014</P>
+                        <p class="baffah">Location: Madobi, Madobi LG </p>
+                        <p class="note">This is my primary school that attend, i was start it from primary 2 to 6 all in class B. i'm familiar with many friends some are unforgettable in my life still some we're together.</p>
+                    </div>
+                </div>
+
+                <div class="school">
+                    <img src="image/ungogo.jpg" alt="ungogo">
+                    <div class="school-info">
+                        <h3>GOVERNMENT TECHNICAL COLLEGE, UNGOGO</h3>
+                        <P class="baffah">Year: 2014-2017</P>
+                        <p class="baffah">Location: Kwanar Ungogo, Ungogo LG </p>
+                        <p class="note">This is my first ever boading school, i had getting lashes and bullying in this school and is amount of my favorite school my registration number is <b>JSS/14/252</b> i did class JSS 1D-3D my houstel is Barde I house. I spent three years in th is school from <b>8 November 2014</b> to <b>24 july 2014.</b> </p>
+                    </div>
+
+                    <div class="school">
+                        <img src="image/images.jpeg" alt="abacha">
+                        <div class="school-info">
+                            <h3>GOVERNMENT TECHNICAL COLLEGE, SANI ABACHA</h3>
+                            <P class="baffah">Year: 2017-2018</P>
+                            <p class="baffah">Location: Madobi road, Kumbosto LG </p>
+                            <p class="note">Is the school that i went for a short time. i only spent two month  because it's day school. my registration no is <b>NTC/17/181</b> Department of furniture and craft practice.</p>
+                        </div>
+                    </div>
+
+                    <div class="school">
+                        <img src="image/bagauda.jpg" alt="bagauda">
+                        <div class="school-info">
+                            <h3>GOVERNMENT TECHNICAL COLLEGE, BAGAUDA</h3>
+                            <P class="baffah">Year: 2018-2018</P>
+                            <p class="baffah">Location: Dakastelle, Bebeji LG </p>
+                            <p class="note">Is the school that i continued after getting transfer from GTC Sani Abacha. i was Started from <b>7 january 2018</b> to <b>24 November 2020</b>, i did NTC 1F-3F In department of Mechanical engineering carft practice <b>MECP</b>, i was graduated from NTCE, technical school are use ntce not ssce. <img src="image/hostel.jpg" alt="hostel" class="bbc"> my houstel is Danfodio house, i live with many friends those are unforgettable together with us getting lashes and bullying in houstel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="school">
+                    <img src="image/matric.jpg" alt="mat">
+                    <div class="school-info">
+                        <h3>SCHOOL OF MATRICULATION STUDIES, USAMA DANFODIO UNIVERSITY SOKOTO</h3>
+                        <P class="baffah">Year: 2021</P>
+                        <p class="baffah">Location: CITY Campus, sokoto </p>
+                        <p class="note">i had attend SCHOOL OF MATRICULATION STUDIES <b>SMS-UDUS</b> now it is a SCHOOL OF BASIC AND ADVANCED STUDIES <b>SOBAS-UDUS.</b> i spent six month in that school before finished the program</p>
+                    </div>
+                </div>
+
+                <div class="school">
+                    <img src="image/futb.jpg" alt="futb"> <a class="bbc"><img src="image/babura.jpg" alt="bbr"></a>
+                    <div class="school-info">
+                        <h3>FEDERAL UNIVERSITY OF TECHNOLOGY, BABURA</h3>
+                        <P class="baffah">Year: 2023-Date</P>
+                        <p class="baffah">Location: Babura LG, Jigawa State</p>
+                        <p class="note">This is my current school in the software engineering department, i had finish my first year in school.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+        </footer>
+    </div>
+    <script src="madodi.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .car {
+            display: flex;
+            align-items: center;
+        }
+        .left-image {
+            margin-right: 10px;
+        }
+        .text-container {
+            flex: 3; /* Take up all available space */
+        }
+        img {
+            width: 220px;
+            height: 300px;
+            border-radius: 10px;
+            padding-top: 50px;
+        }
+        .jjj {
+            padding-left: 40px;
+            padding-top: 30px;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(65, 46, 22);
+        }
+        .musa {
+            text-align: center;
+            color: rgb(99, 34, 34);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="banner-area">
+                <a>welcome to website of</a>
+                <br>
+                <h2>KLAWAN</h2>
+                <div class="datetime-container">
+                    <p id="datetime"></p>
+                </div>
+            </div>
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="dashboard"></div>
+            <div class="dashboard" onclick="loadContent('index.html')">Dashboard</div>
+        </header>
+        <div class="menu">
+            <a href="#" onclick="loadContent('about.html')">About Klawan</a>
+            <a href="#" onclick="loadContent('schools.html')">Schools</a>
+            <a href="#" onclick="loadContent('friends.html')">Friends</a>
+            <a href="#" onclick="loadContent('family.html')">Family</a>
+            <a href="logout.php">Logout</a>
+        </div>
+        <main class="kkk">
+            <h2 class="musa"> DASHBOARD</h2> <hr>
+            <div class="car">
+                <img src="image/klm.jpg" alt="bbb" class="left-image">
+                <div class="text-container">
+                    <p>We're welcome to the klawan website once again. this is personal informatinal website, is belongs KAMAL LAWAN</p>
+                    <p>
+                        <blockquote>is prohibited some one vist without permission of its ower. you can view the list mention below to see what support to see in this site</blockquote>
+                    </p>
+                </div>
+            </div>
+            <p>
+                <p class="hau">
+                    <ul class="jjj">
+                        <li>About:- to now some little history about klawan</li>
+                        <li>Schools:- school that klawan attend and his current</li>
+                        <li>Friends:- the current closed friends of klawan</li>
+                        <li>Family:- his family, brothers and sistera </li>
+                        <li>Logout:- After views you can logout  </li>
+                    </ul>
+                </p>
+            </p>
+        </main>
+
+        <footer>
+            <div class="content">
+                <div class="top">
+                    <div class="logo-details">
+                        <span class="logo_name">MADOBI KANO</span>
+                    </div>
+                    <div class="media-icons">
+                        <a href="https://www.facebook.com/kamallawan.klawan?mibextid=ZbWKwL" target="-blank" rel="nooperner noreferrer">
+                            <i class="fab fa-facebook" style="font-size: 40px; padding-top: px;"></i>
+                        </a>
+                        <a href="https://twitter.com/KLawan020?t=KtLFXHnS0Mv_Rz22Kgv5rQ&s=09c" target="-blank" rel="nooperner noreferrer">
+                            <i class="fab fa-twitter" style="font-size: 30px; padding-top: 5px;"></i>
+                        </a>
+                        <a href="https://www.instagram.com/invites/contact/?i=xjnscc45y5mn&utm_content=h5cph3l" target="-blank" rel="nooperner noreferrer">
+                            <i class="fab fa-instagram" style="font-size: 30px; padding-top: 5px;"></i>
+                        </a>
+                        <a href="https://wa.me/qr/IGY4YBM4RFZGM1" target="-blank" rel="nooperner noreferrer">
+                            <i class="fab fa-whatsapp" style="font-size: 30px; padding-top: 5px;"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kamal-lawan-3626502a4" target="-blank" rel="nooperner noreferrer">
+                            <i class="fab fa-linkedin" style="font-size: 30px; padding-top: 5px; "></i>
+                        </a>
+                        <a href="https://www.youtube.com/@Klawan20" target="-blank" rel="nooperner noreferrer">
+                            <i class="fab fa-youtube" style="font-size: 30px; padding-top: 5px;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="link-box">
+                    <ul class="box">
+                        <li class="link_name">Link</li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Get Started</a></li>
+                    </ul>
+                    <ul class="box">
+                        <li class="link_name">Services</li>
+                        <li><a href="https://klawan.github.io/kamal">App Desing</a></li>
+                        <li><a href="https://klawan.github.io/form">Web Desing</a></li>
+                        <li><a href="#">Logo Desing</a></li>
+                    </ul>
+                    <ul class="box">
+                        <li class="link_name">Contact</li>
+                        <li><a href="tel:+2349131297496" class="contact-icon">
+                            <i class="fas fa-phone" style="font-size: 20px; color: rgb(179, 179, 238);"></i>
+                        </a></li>
+                        <li><a href="tel:+2347086065990" class="contact-icon">
+                            <i class="fas fa-phone" style="font-size: 20px; color: rgb(179, 179, 238);"></i>
+                        </a></li>
+                        <li><a href="mailto:kamallawan4020@gmail.com" target="_blank" rel="nooperner noreferrer">
+                            <i class="fas fa-envelope" style="font-size: 20px; color: rgb(206, 228, 186);"></i>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-details">
+                    <span class="copyrigth_text">
+                 <div class="bottom-text">
+                       <b>copyrigth 2024 &copy;
+                        <br>
+                        POWERED BY KLAWAN_madobi</b>
+                        <a href="#">Privacy</a>
+                        <div class="credit">Made with<span style="color: tomato;">&hearts;</span></div>
+                        by <a href="http://klawan.github.io/klawan20/">Learning klawan</a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div> 
+    <script src="madodi.js"></script>
+</body>
+</html>

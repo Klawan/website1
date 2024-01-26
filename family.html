@@ -1,0 +1,219 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .kura {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            height: 20px;
+        }
+        .family-member {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .family-member img {
+            border-radius: 15%;
+            margin-right: 15px;
+            width: 350px;
+            height: 500px;
+        }
+        .info {
+            flex-grow: 1;
+        }
+        .name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .achievement {
+            color: #666;
+        }
+        .video-container {
+            max-width: 800px;
+            width: 100px;
+        }
+        video {
+            width: 250px;
+            height: 150px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="banner-area">
+                <a>welcome to website of</a>
+                <br>
+                <h2>KLAWAN</h2>
+                <div class="datetime-container">
+                    <p id="datetime"></p>
+                </div>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="dashboard"></div>
+            <div class="dashboard" onclick="loadContent('family.html')">Family</div>
+        </header>
+        <div class="menu">
+            <a href="#" onclick="loadContent('index.html')">Dashboard</a>
+            <a href="#" onclick="loadContent('about.html')">About Klawan</a>
+            <a href="#" onclick="loadContent('schools.html')">Schools</a>
+            <a href="#" onclick="loadContent('friends.html')">Friends</a>
+            <a href="logout.php">Logout</a>
+        </div>
+        <main id="kura"> 
+            <h1>Family</h1> <hr>
+            <div class="family-member">
+                <img src="image/female.jpg" alt="femsle">
+                <div class="info">
+                    <div class="name">MURJA LAWAN ADAM</div>
+                    <div class="achievement">She is the first born in the home. She graduated from secondry school in 2003</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/yaya.jpg" alt="yaya">
+                <div class="info">
+                    <div class="name"><b>DR.</b> ABUBAKAR LAWAN</div>
+                    <div class="achievement">He is our big brother and mentor. he is graduated of <b>MBBS</b> from USAMAN DANFODIO UNIVERSITY, SOKOTO in 2016</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/female.jpg" alt="femsle">
+                <div class="info">
+                    <div class="name">HAJARA LAWAN</div>
+                    <div class="achievement">She is the third born in home and she graduated from GGSS Madobi in 2008 then she went to school of hygiene, kano and graduated in 2011</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/yaudu.jpg" alt="yaudu">
+                <div class="info">
+                    <div class="name">ABDULRAHMAN LAWAN IBRAHIM</div>
+                    <div class="achievement">He is only one that playing football in our home. he is graduated in political science from USAMAN DANFODIO UNIVERSITY, SOKOTO in 2021</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/female.jpg" alt="femsle">
+                <div class="info">
+                    <div class="name">SAFFIYYA LAWAN IBRAHIM</div>
+                    <div class="achievement">She graduated from secondry school in 2013 and also graduated in CHEW from college of health science and technology, bebeji in 2019</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/pooh.jpg" alt="pooh">
+                <div class="info">
+                    <div class="name"><b>ARC.</b> SAIFULLAHI MUHD LAWAN</div>
+                    <div class="achievement">He graduated from federal science college, sokoto in 2015 and he went to ALIKO DANGOTE UNIVERSITY OF SCIENCE AND TECHNOLOGY, WULID and graduated in architecture in 2019</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/female.jpg" alt="femsle">
+                <div class="info">
+                    <div class="name">MARYAM LAWAN ADAM</div>
+                    <div class="achievement">She graduated from secondry school in 2016 and now she is final year student of food science and technology in ALIKO DANGOTE UNIVERSITY OF SCIENCE AND TECHNOLOGY, WUDIL</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/baffah.jpg" alt="baffah">
+                <div class="info">
+                    <div class="name">IBRAHIM LAWAN IBRAHIM</div>
+                    <div class="achievement">He graduated from federal science college, sokoto in 2019 and now he is student of bulding technology in ALIKO DANGOTE UNIVERSITY OF SCIENCE AND TECHNOLOGY, WUDIL</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/female.jpg" alt="femsle">
+                <div class="info">
+                    <div class="name">HAFSAT LAWAN IBRAHIM</div>
+                    <div class="achievement">She graduated from secondry school in 2021 and now she is student of education Chemisty in ALIKO DANGOTE UNIVERSITY OF SCIENCE AND TECHNOLOGY, WUDIL</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/me.jpg" alt="me">
+                <div class="info">
+                    <div class="name">KAMAL LAWAN</div>
+                    <div class="achievement"><b>KLAWAN</b> He graduated his secondry school in 2020 and now he is student of software engineering in FEDERAL UNIVERSITY OF TECHNOLOGY, BABURA JIGAWA STATE</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/female.jpg" alt="femsle">
+                <div class="info">
+                    <div class="name">FATIMA LAWAN IBRAHIM</div>
+                    <div class="achievement"><b>Bintu</b> She graduated his secondry from FIRST LADY SCIENCE COLLEGE, KANO in 2022</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/female.jpg" alt="femsle">
+                <div class="info">
+                    <div class="name">AISHA LAWAN IBRAHIM</div>
+                    <div class="achievement"><b>Humaira</b> she is in secondrY school student at ABBA ACADEMY NURSERY PRIMARY AND SECONDRY SCHOOL</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/female.jpg" alt="femsle">
+                <div class="info">
+                    <div class="name">SAFFIYYA ISAH UZAIRU</div>
+                    <div class="achievement"><b>Iman</b> She is lovely granddaughter in our home, now she is in primary school at ABBA ACADEMY NURSERY PRIMARY AND SECONDRY SCHOOL</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/alhaji.jpg" alt="alhaji">
+                <div class="info">
+                    <div class="name">ADAM LAWAN</div>
+                    <div class="achievement"><b>Ahaji</b> he was born in 2014 and now he was in primary school at ASAS SCHOOL</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/faruq.jpg" alt="faruq">
+                <div class="info">
+                    <div class="name">UMAR LAWAN</div>
+                    <div class="achievement"><b>Faruq</b> he was born on 3 jan. 2016. and now he was in primary school at ASAS SCHOOL</div>
+                </div>
+            </div>
+
+            <div class="family-member">
+                <img src="image/babaali.jpg" alt="babaali">
+                <div class="info">
+                    <div class="name">ALIYU LAWAN IBRAHIM</div>
+                    <div class="achievement"><b>Baba Ali</b> he was born in 4 jan. 2021 and he is the last born in our home. our father died a year after he his born</div>
+                    <div class="video-container">
+                        <video controls>
+                            <source src="image/aliyu.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div> 
+    <script src="madodi.js"></script>
+</body>
+</html>
+

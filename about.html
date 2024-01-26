@@ -1,0 +1,208 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .lagos {
+            border: 1px solid rgb(110, 105, 105);
+            padding: 20px;
+            padding-bottom: 30px;
+            align-items: center;
+            border-radius: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgb(112, 93, 9);
+        }
+        .mama {
+            text-align: center;
+            font-size: 30px;
+            color: rgb(51, 27, 10);
+        }
+        hr {
+            color: black;
+            font-weight: bold;
+        }
+        .center-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .center-image img {
+            max-width: 30%;
+        }
+        audio {
+            width: 50%;
+            max-width: 250PX;
+            height: 12px;
+            border-radius: 25px;
+        }
+        audio::-webkit-media-controls {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+        audio::-webkit-media-controls-play-button,
+        audio::-webkit-media-controls-mute-button {
+            background-color: #418613;
+            color: #fff;
+        }
+        .kano {
+            width: 100%;
+            max-width: 400px;
+            height: 30px;
+        }
+        .kano::-webkit-media-controls-play-button,
+        .kano::-webkit-media-controls-mute-button {
+            background-color: #3a4208;
+            color: #fff;
+        }
+        .car {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            color: #203d0d;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .left-image {
+            margin-right: 10px;
+            width: 180px;
+            height: 230px;
+            padding-top: 10px;
+            padding-left: 170px;
+        }
+        .text-container {
+            flex: 1; /* Take up all available space */
+        }
+        h4 {
+            font-weight: 100;
+            color: rgb(22, 4, 41);
+            font-size: 20px;
+            font-family: 'Times New Roman';
+        }
+        .fatima {
+            font-size: 19px;
+            color: rgb(12, 94, 32);
+            font-family: 'papyrus';
+        }
+        .humaira {
+            font-size: 18.5px;
+            color: black;
+            font-family: 'console';
+        }
+        .alhaji {
+            color: black;
+            font-size: 17px;
+            font-family: 'helvetica';
+        }
+        blockquote {
+            color: #2c3106;
+            font-size: 18px;
+            font-family: 'brush script mt';
+        }
+        .umar {
+            font-size: 18px;
+            color: black;
+            font-family: 'roman';
+        }
+        .aliyu {
+            font-size: 17.5px;
+            color: #333;
+            font-family: 'copperplate';
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="banner-area">
+                <a>welcome to website of</a>
+                <br>
+                <h2>KLAWAN</h2>
+                <div class="datetime-container">
+                    <p id="datetime"></p>
+                </div>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="dashboard"></div>
+            <div class="dashboard" onclick="loadContent('about.html')">About klawan</div>
+        </header>
+        <div class="menu">
+            <a href="#" onclick="loadContent('index.html')">Dashboard</a>
+            <a href="#" onclick="loadContent('schools.html')">Schools</a>
+            <a href="#" onclick="loadContent('friends.html')">Friends</a>
+            <a href="#" onclick="loadContent('family.html')">Family</a>
+            <a href="logout.php">Logout</a>
+        </div>
+        <main class="dwww">
+            <h2 class="mama">About klawan</h2><hr>
+            <div class="lagos">
+            <div class="fatima">
+                <br>
+                <br>
+                <img src="picture/001.jpg" alt="001" width="155" height="150" align="bottom" />  My name is <b>KAMAL LAWAN,</b> and you can call me <b>K-LAWAN</b>. I was born on 5 september in madobi, madobi local government area, kano state. i start my nursery at AL-isshad nursery and primary school, lagos state. before our father return us kano to continue school at madobi.
+            </div>
+            <div class="humaira">
+                <br>
+                <br>
+                <br>
+                <img src="picture/003.jpg" alt="class-mate" width="200" height="140" align="right" />  With our classmates of Al-isshad nursery and primary school, lagos state some years ago. each of them i will not identified if i saw him, even their name's i can't remember.
+            </div>
+            <p class="alhaji">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p class="alhaji">Afte we back i was continue my school at madobi iya special primary school kano state. in 2010 to continue from primary 4. and i was graduated in 2014 from primary school <br> <img src="picture/004.jpg" alt="auwal" width="160" height="120"> Together with Auwal Abubakar 10 year ago at Madobi iya special primary school field during p-graduation competition with teachers, still up to now we're together with him as friend</p>
+            </p>
+            <br>
+            <br>
+            <p class="alhaji"> I start my secondry school at Government Technical College, Ungogo in 2014, i was spent three years at school before graduated from <b>JSCE</b> in 2017. i'm familiar with many friends expecially my roommates and classmates the ones we spent three years together with us. <br> <br> 
+                <img src="picture/006.jpg" alt="islamiya" width="200" height="140" align="center">
+            </p>  <blockquote>with my friend of islamiya at Government Technical College, Ungogo in 2017 before us to graduated from JSCE.</blockquote>
+            <br>
+            <br>
+            <h4>I had finished my Senior secondry at Government Technical College, Bagauda. i had spent atleast of three three in school in department of mechanical engineering craft practice <b>NTC 1f - 3f</b> <img src="picture/008.jpg" alt="00" width="170" height="110" align="left"> and i was graduated in november 2020.  This picture it was a graduation picture together with classmates and also form master <b>MAL. ABBAS DABO SULAIMAN</b> he is our form master since NTC 1 till graduated from the school and he gave us more discipline that is way he is unforgettable for us.</h4>
+            <br>
+            <br>
+            <br>
+            <p class="umar">
+                I had studied  at School of matriculation studies, Usman danfodio university sokoto now as School of basic and advanced studies-UDUS in 2021 for remidial certificate.
+            </p>
+            <br>
+            <br>
+            <br>
+            <div class="aliyu">
+                <div class="center-image">
+                    <img src="picture/baba.png" alt="baba">
+                </div>
+                My father late mal. Lawan he was died on <b>6 march 2022 = 3 sha'ban 1443HA</b> he died at age of 61 years in his life. His death was a thing that still feeling me in my mind that i will never forget with it in my life. <br> <audio controls>
+                    <source src="picture/AUD-20240124-WA0021.m4a" type="audio/mp3">
+                </audio> this is only voice of father that have, when he call me. <br> <br> <audio controls class="kano">
+                <source src="picture/taaziya-1.mp3" type="audio/mp3">
+            </audio> This is the condolences of my father who was presented at one of the Nigerian radio stations. my ALLAH SWT grant his soul and make him soul in Aljanatul firdausy.
+            </div>
+        </p>
+        <br>
+        <br>
+        <br>
+        <div class="car">
+            <img src="picture/IMG-20230316-WA0184.jpg" alt="bbb" class="left-image">
+            <div class="text-container">
+                <p><b>UMAR ALIYU HARUNA</b> currently i didn't have friend like him, fact always i glance him as my brother. because we lengthy of six year we're eating with one bowl, six years in thesame room and three years in thesame class. we're in different local government we can't take alot of time without meet.</p>
+        </div>
+        <br>
+        <br>
+        </div>
+    </main>
+
+        <footer>
+        </footer>
+    </div> 
+    <script src="madodi.js"></script>
+</body>
+</html>

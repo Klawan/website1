@@ -1,0 +1,306 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        .klm h2 {
+            color: darkgreen;
+        }
+        
+        .klm {
+            border: 1px solid #270f0f;
+            border-radius: 30px;
+            padding: 16px;
+            margin: 16px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgb(0, 34, 18);
+        }
+        
+        .kano {
+            border: 1px solid #ccc;
+            border-radius: 11px;
+            padding: 16px;
+            margin: 16px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgb(49, 41, 41);
+        }
+
+        .kano img {
+            width: 200px;
+            height: 250px;
+            border-radius: 15%;
+            margin-bottom: 12px;
+        }
+
+        .kano h2 {
+            margin-bottom: 8px;
+            color: rgb(17, 17, 94);
+        }
+
+        .kano p {
+            margin: 8px 0;
+        }
+        p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="banner-area">
+                <a>welcome to website of</a>
+                <br>
+                <h2>KLAWAN</h2>
+                <div class="datetime-container">
+                    <p id="datetime"></p>
+                </div>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="dashboard"></div>
+            <div class="dashboard" onclick="loadContent('friends.html')">Friends</div>        
+        </header>
+        <div class="menu">
+            <a href="#" onclick="loadContent('index.html')">Dashboard</a>
+            <a href="#" onclick="loadContent('about.html')">About Klawan</a>
+            <a href="#" onclick="loadContent('schools.html')">Schools</a>
+            <a href="#" onclick="loadContent('family.html')">Family</a>
+            <a href="logout.php">Logout</a>
+        </div>
+        <main class="madobi"> 
+            <h1>FRIENDS</h1><hr>
+            <div class="friend">
+                <img src="image/goro.jpg" alt="umar">
+                <h2>UMAR ALIYU HARUNA</h2>
+                <p>Nickname: Mai-Goro</p>
+                <p>State: Kano</p>
+                <p>Local Government: Kura</p>
+                <p>School: Federal polythechnic Bauchi</p>
+                <p>Program of Study: ND Civil Engineering</p>
+            </div>
+
+            <div class="friend">
+                <img src="image/sule.jpg" alt="sulaiman">
+                <h2>SULAIMAN ABDULLAHI</h2>
+                <p>Nickname: Mujaddadi</p>
+                <p>State: Kano</p>
+                <p>Local Government: Madobi</p>
+                <p>School: Ahmadu Bello University, Zaria <b>A.B.U</b></p>
+                <p>Program of Study: Bsc <b>MBBS</b></p>
+            </div>
+
+            <div class="friend">
+                <img src="image/bk.jpg" alt="Abdul">
+                <h2>ABDULRAHIM MUHD SANI</h2>
+                <p>Nickname: Abdul</p>
+                <p>State: Kano</p>
+                <p>Local Government: Kura</p>
+                <p>School: Federal University, Duste <b>F.U.D</b></p>
+                <p>Program of Study: Bsc Chemisty</p>
+            </div>
+
+            <div class="friend">
+                <img src="image/M³_1705521275757.jpg" alt="muhd">
+                <h2>MUHD MAHMUD MALAMI</h2>
+                <p>Nickname: M<sup>3</sup></p>
+                <p>State: Sokoto</p>
+                <p>Local Government: Sokoto south</p>
+                <p>School: Usaman Danfodio University, Sokoto <b>UDUS</b></p>
+                <p>Program of Study: ------------</p>
+            </div>
+
+            <div class="friend">
+                <img src="image/yusuf.jpg" alt="yusuf">
+                <h2>YUSUF TAPEEDA</h2>
+                <p>Nickname: Tapeeda</p>
+                <p>State: Kano</p>
+                <p>Local Government: Madobi</p>
+                <p>School: Aliko Dangote University Of Science and Technology, Wudil <b>ADUSTECH</b></p>
+                <p>Program of Study: BEng Water Resources and Enviromental Engineering</p>
+            </div>
+
+            <div class="friend">
+                <img src="image/musty.jpg" alt="musty">
+                <h2>MUSTAPHA SAGIR IDRIS</h2>
+                <P>Nickname: <b>Dan-China</b></P>
+                <p>State: Kano</p>
+                <p>Local Government: Madobi</p>
+                <p>Chief Accountant at chanese Company, Kano</p>
+            </div>
+
+            <div class="friend">
+                <img src="image/kshehu.jpg" alt="kshehu">
+                <h2>KABIR SHEHU IDRIS</h2>
+                <p>Nickname: K-SHEHU</p>
+                <p>State: Kano</p>
+                <p>Local Government: Madobi</p>
+                <p>School: Al-qalam University, Kastina</p>
+                <p>Program of Study: Bsc Computer Science</p>
+            </div>
+
+            <div class="friend">
+                <img src="image/zayyad.jpg" alt="zayyad">
+                <h2>ZAYYAD SHEHU</h2>
+                <p>State: Kano</p>
+                <p>Local Government: Madobi</p>
+                <p>School: Aliko Dangote University Of Science and Technology, Wudil <b>ADUSTECH</b></p>
+                <p>Program of Study: BEng Electrical Engineering</p>
+            </div>
+
+            <div class="friend">
+                <img src="image/abbaa.jpg" alt="abba">
+                <h2>ABUBAKAR AUWAL</h2>
+                <p>Nickname: Abba</p>
+                <p>State: Kano</p>
+                <p>Local Government: Madobi</p>
+                <p>School: College Of Health Science and Technology, Kazaure</p>
+                <p>Program of Study: ND Community Health</p>
+            </div>
+
+            <div class="friend">
+                <img src="image/wudil.png" alt="umar">
+                <h2>UMAR SANI</h2>
+                <p>Nickname: Dan-wudil</p>
+                <p>State: Kano</p>
+                <p>Local Government: Wudil</p>
+                <p>School: Aliko Dangote University Of Science and Technology, Wudil <b>ADUSTECH</b></p>
+                <p>Program of Study: ---------</p>
+            </div>
+
+            <div class="friend">
+                <img src="image/prices.jpg" alt="prices">
+                <h2>NUHU ALHASAN TURAKI</h2>
+                <p>Nickname: TURAKI</p>
+                <p>State: Kano</p>
+                <p>Local Government: Kura</p>
+                <p>School: School Of Hygiene Kano</p>
+                <p>Program of Study: ND Community Health</p>
+            </div>
+
+            <div class="friend">
+                <img src="image/akn.jpg" alt="akn">
+                <h2>ABDULKADIR KABIR NASARAWA</h2>
+                <p>Nickname: A.K.N</p>
+                <p>State: Kano</p>
+                <p>Local Government: Nasarawa</p>
+                <p>School: Federal University Of Technology, Babura Jigawa State <b>FUTB</b></p>
+                <p>Program of Study: Bsc Biology</p>
+            </div>
+
+            <div class="friend">
+                <img src="image/bendwon.jpg" alt="bendown">
+                <h2>ABUBAKAR IBRAHIM ABDULLAHI</h2>
+                <p>Nickname: Bendown</p>
+                <p>State: Kano</p>
+                <p>Local Government: Kano Municipal</p>
+                <p>School: Federal University, Duste <b>F.U.D</b></p>
+                <p>Program of Study: Bsc Fishery</p>
+            </div>
+
+            <div class="kano">
+                <img src="image/U²G².jpg" alt="us">
+                <h2>USAMA USAMAN GARBA</h2>
+                <p>Nickname: U<sup>2</sup>G<sup>2</sup></p>
+                <p>State: Kano</p>
+                <p>Local Government: Gwale</p>
+            </div>
+
+            <div class="kano">
+                <img src="image/Bilal.jpg" alt="bilal">
+                <h2>BILAL MUHD SANI</h2>
+                <p>State: Kano</p>
+                <p>Local Government: Gwale</p>
+            </div>
+
+            <div class="kano">
+                <img src="image/abbaido.jpg" alt="ido">
+                <h2>SULAIMAN ISHAQ</h2>
+                <p>Nickname: Abba-Ido</p>
+                <p>State: Kano</p>
+                <p>Local Government: Madobi</p>
+            </div>
+
+            <div class="kano">
+                <img src="image/MK.jpg" alt="MK">
+                <h2>MUHAMMAD INUWA ALIYU</h2>
+                <p>Nickname: MK</p>
+                <p>State: Kano</p>
+                <p>Local Government: Hotoro, Nasarawa</p>
+            </div>
+
+            <div class="kano">
+                <img src="image/chobe.jpg" alt="chobe">
+                <h2>IDRIS MUHAMMAD</h2>
+                <p>Nickname: Chobe</p>
+                <p>State: Kano</p>
+                <p>Local Government: Dawakin Kudu</p>
+            </div>
+
+            <ul class="klm">
+                <li>
+                    <div>
+                        <h2>ALIYU TASI'U UMAR</h2>
+                        <p>Nickname: ALI</p>
+                        <p>State: Kano</p>
+                        <p>Local Government: Bagwai</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <h2>AUWALU ABUBAKAR</h2>
+                        <p>Nickname: Messi</p>
+                        <p>State: Kano</p>
+                        <p>Local Government: Madobi</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <h2>NURA SA'ID ABDULLAHI</h2>
+                        <p>Nickname: Nur</p>
+                        <p>State: Kano</p>
+                        <p>Local Government: Madobi</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <h2>HAFIZU SULAIMAN</h2>
+                        <p>Nickname: Mai salati</p>
+                        <p>State: Kano</p>
+                        <p>Local Government: Madobi</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <h2>ABDULLAHI UMAR</h2>
+                        <p>Nickname: Tururuwa</p>
+                        <p>State: Kano</p>
+                        <p>Local Government: Madobi</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <h2>MUHD SHAFI'U</h2>
+                        <p>State: Kano</p>
+                        <p>Local Government: Madobi</p>
+                    </div>
+                </li>
+            </ul>
+        </main>
+
+        <footer></footer>
+    </div>
+    <script src="madodi.js"></script>
+</body>
+</html>
